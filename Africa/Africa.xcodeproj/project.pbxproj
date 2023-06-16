@@ -49,7 +49,7 @@
 		4EFE96492A3C589F0078BE3C /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE96482A3C589F0078BE3C /* MotionAnimationView.swift */; };
 		4EFE964B2A3C755E0078BE3C /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE964A2A3C755E0078BE3C /* AnimalGridItemView.swift */; };
 		4EFE96512A3CF9430078BE3C /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFE96502A3CF9430078BE3C /* Stickers.xcassets */; };
-		4EFE96552A3CF9430078BE3C /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4EFE964E2A3CF9410078BE3C /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EFE96552A3CF9430078BE3C /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4EFE964E2A3CF9410078BE3C /* Stickers.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EFE965B2A3CFB870078BE3C /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE965A2A3CFB870078BE3C /* CreditsView.swift */; };
 		4EFE965E2A3CFD280078BE3C /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE965D2A3CFD280078BE3C /* CenterModifier.swift */; };
 /* End PBXBuildFile section */
@@ -127,6 +127,7 @@
 		4EFE96522A3CF9430078BE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFE965A2A3CFB870078BE3C /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		4EFE965D2A3CFD280078BE3C /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
+		4EFE965F2A3D01E60078BE3C /* Africa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Africa.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 		4E3CF2312A2E30460089D5B1 /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				4EFE965F2A3D01E60078BE3C /* Africa.entitlements */,
 				4EFE965C2A3CFD160078BE3C /* Modifier */,
 				4EFE96412A3BAE100078BE3C /* Helper */,
 				4EF950BA2A313279009D43DB /* Extension */,
@@ -438,6 +440,7 @@
 /* Begin PBXTargetDependency section */
 		4EFE96542A3CF9430078BE3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 4EFE964D2A3CF9410078BE3C /* Stickers */;
 			targetProxy = 4EFE96532A3CF9430078BE3C /* PBXContainerItemProxy */;
 		};
@@ -563,6 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
@@ -583,6 +587,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jesusfortuna.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -594,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Africa/Africa.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Africa/Preview Content\"";
@@ -614,6 +622,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jesusfortuna.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,6 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jesusfortuna.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -653,6 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jesusfortuna.Africa.Stickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
